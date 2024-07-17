@@ -1,0 +1,1 @@
+const calculator = require('./06_add_js_example_pt1');
