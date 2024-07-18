@@ -84,14 +84,19 @@ function fizzBuzz(num){
     }else{
         console.log(num);
     };
+    
 };
 
-console.log("Fizzbuzz function:");
-console.log("Should give Fizz:");
-fizzBuzz(6);
-console.log("Should give Buzz:");
-fizzBuzz(10);
-console.log("Should give FizzBuzz:");
-fizzBuzz(15);
-console.log("Should give back the inputed number:");
-fizzBuzz(22);
+
+// console.log("Fizzbuzz function:");
+// console.log("Should give Fizz:");
+// fizzBuzz(6);
+// console.log("Should give Buzz:");
+// fizzBuzz(10);
+// console.log("Should give FizzBuzz:");
+// fizzBuzz(15);
+// console.log("Should give back the inputed number:");
+// fizzBuzz(22);
+
+
+   

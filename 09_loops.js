@@ -1,79 +1,73 @@
-/*EXERCISE 1:
-Create an array of a few names of people you know and:
-Print the array's length.
-Print the second name of the array.
-Create a new array by adding a new name to the existing array.
+/* EXERCISE 1:
+
+Use a for loop to iterate numbers from 1 to 20, and for each of them, print whether the number is even or odd.
+
+You should get the following output:
+
+1 is odd
+2 is even
+3 is odd
+(...)
 
 */
 
-an_array_of_names = ["Glory","Phoebe", "Mark", "Jennifer", "Beneditte", "Georgia", "Peter"];
-
-// console.log("This is the length of the array:");
-// console.log(an_array_of_names.length);
-// console.log("This is the 2nd name of the array:");
-// console.log(an_array_of_names[1]);
-// an_array_of_names.push("Alan");
-// console.log(an_array_of_names);
-
-// the_other_array = an_array_of_names.concat("Lucy-Anne");
-// console.log(the_other_array);
+// for (let i = 1; i<=20; i++){
+//     if(i % 2 ===0 ){
+//         console.log(i + " is even")
+//     }else{
+//         console.log(i + " is odd")
+//     }
+// };
 
 
-/*EXERCISE 2:
-Create an array of all numbers from 1 to 10. Calculate the sum of all these numbers by looping through the array.
-*/
+/* EXERCISE 2:
+Write a function fizzbuzzUntil that accepts a number. This function should use a loop to loop through all numbers from 1 to the given one, call the fizzBuzz function for the current number and print the result.
 
-// const numbers_array = [1,2,3,4,5,6,7,8,9,10];
-// console.log("numbers_array");
-// container = 0;
-// numbers_array.forEach((number)=> 
-//     container += number
-// );
+You should get the following output:
 
-// console.log(container);
+// In node
 
+const fizzbuzzUntil = require('./fizzbuzzUntil');
 
+fizzbuzzUntil(10);
 
-
-/*EXERCISE 3:
-You are helping your friend, who owns a candies business, with their website. Every order placed on the website gets assigned an order ID, such as 1274.
-
-Your friend would like to create batches of five order IDs. They ask you if you could give a hand and write a small program to do this.
-
-To complete this exercise you will have to find out:
-
-how to add elements to an array with the .concat method
-how to get the length of an array
-Questions
-Declare a function addToBatch that takes two arguments, an array and a number, and returns a new array by adding the number to the array.
-Now, make sure this function does not add the number if the array's length is already 5 or greater — it should just return the array untouched in that case.
-Once your function is written, you should be able to type the following code into the node REPL and have the exact same output:
-
-> const addToBatch = require("./addToBatch.js")
-> addToBatch([1], 3); 
-[ 1, 3 ]
-
-> addToBatch([1, 2, 3], 4); 
-[ 1, 2, 3, 4 ]
-
-> addToBatch([], 8); 
-[ 8 ]
-
-> addToBatch([1, 2, 3, 4, 5, 6], 7); 
-[ 1, 2, 3, 4, 5, 6 ]
-
-> addToBatch([1, 2, 3, 4, 5, 6, 7, 8, 9], 10); 
-[ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
 
 */
 
-function addToBatch(array, number){
-    if (array.length >= 5){
-        console.log(array);
-    } else {
-        console.log(array.concat(number));
-    }
+
+
+function fizzBuzz(num){
+    
 };
 
-addToBatch([0, 1], 1);
+
+function fizzbuzzUntil(number){
+    for(i = 1; i <= number; i++){
+        if(i % 3 === 0 && i % 5 === 0){
+            console.log("FizzBuzz");
+        }else if (i % 5 === 0){
+            console.log("Buzz");
+        }else if(i % 3 === 0){
+            console.log("Fizz");
+        }else{
+            console.log(i);
+        };
+    }
+    
+};
+
+console.log("Challenbge started:");
+console.log(fizzbuzzUntil(10));
+
+
+// module.exports = fizzbuzzUntil; 
